@@ -1,0 +1,52 @@
+{
+    "routes": [
+        {
+            "method": "GET",
+            "path": "/stapi/live/detail/:id",
+            "handler": "stapi.details",
+            "config": {
+                "policies": []
+            }
+        },
+        {
+            "method": "GET",
+            "path": "/stapi/live/live/:id",
+            "handler": "stapi.live",
+            "config": {
+                "policies": []
+            }
+        },
+        {
+            "method": "GET",
+            "path": "/stapi/live/search",
+            "handler": "stapi.search",
+            "config": {
+                "policies": []
+            }
+        },
+        {
+            "method": "GET",
+            "path": "/stapi/live/subscribeToken/:id",
+            "handler": "stapi.subscribeToken",
+            "config": {
+                "policies": []
+            }
+        },
+        {
+            "method": "GET",
+            "path": "/stapi/live/subscribeGameToken/:id",
+            "handler": "stapi.subscribeGameToken",
+            "config": {
+                "policies": []
+            }
+        },
+        {
+            "method": "GET",
+            "path": "/stapi/live/stats/:id",
+            "handler": "stapi.stats",
+            "config": {
+                "policies": []
+            }
+        }
+    ]
+}

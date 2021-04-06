@@ -1,0 +1,64 @@
+{
+  "kind": "collectionType",
+  "collectionName": "players",
+  "info": {
+    "name": "players",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "first_name": {
+      "type": "string",
+      "required": true
+    },
+    "last_name": {
+      "type": "string",
+      "required": true
+    },
+    "player_id": {
+      "type": "string",
+      "required": false
+    },
+    "twitter_name": {
+      "type": "string",
+      "required": true
+    },
+    "spotify_name": {
+      "type": "string",
+      "required": false
+    },
+    "position": {
+      "type": "string",
+      "required": true
+    },
+    "number": {
+      "type": "integer",
+      "required": true,
+      "private": false
+    },
+    "profile_photo": {
+      "type": "string",
+      "required": true
+    },
+    "leader_photo": {
+      "type": "string"
+    },
+    "seasons": {
+      "collection": "seasons",
+      "via": "players",
+      "dominant": true
+    },
+    "products": {
+      "via": "players",
+      "collection": "products",
+      "private": true
+    },
+    "view_text": {
+      "type": "string"
+    }
+  }
+}

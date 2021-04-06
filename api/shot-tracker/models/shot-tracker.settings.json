@@ -1,0 +1,33 @@
+{
+  "kind": "singleType",
+  "collectionName": "shot_trackers",
+  "info": {
+    "name": "Shot Tracker",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "enable": {
+      "type": "boolean"
+    },
+    "point_guard": {
+      "model": "players"
+    },
+    "shooting_guard": {
+      "model": "players"
+    },
+    "center": {
+      "model": "players"
+    },
+    "small_forward": {
+      "model": "players"
+    },
+    "power_forward": {
+      "model": "players"
+    }
+  }
+}

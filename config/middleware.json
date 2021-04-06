@@ -1,0 +1,49 @@
+{
+    "timeout": 100,
+    "load": {
+      "before": [
+        "responseTime",
+        "logger",
+        "cors",
+        "responses",
+        "gzip"
+      ],
+      "order": [
+        "Define the middlewares' load order by putting their name in this array is the right order"
+      ],
+      "after": [
+        "parser",
+        "router",
+        "serve-react"
+      ]
+    },
+    "settings": {
+      "cors": {
+        "enabled": true,
+        "origin": [
+          "http://localhost", 
+          "http://localhost:3000",
+          "http://127.0.0.1",
+          "http://127.0.0.1:3000",
+          "http://sunsfeed-1414654146.us-west-1.elb.amazonaws.com",
+          "http://sunsfeed-1414654146.us-west-1.elb.amazonaws.com:3000",
+          "http://suns-front.s3-website-us-west-1.amazonaws.com",
+          "http://sunsfeedprod-1852973290.us-west-1.elb.amazonaws.com",
+          "http://sunsfeedprod-1852973290.us-west-1.elb.amazonaws.com:3000"
+        ],
+        "headers": "*"
+      },
+      "cache": {
+        "enabled": true,
+        "maxAge": 3600000,
+        "populateContext": true,
+        "models": [ 
+          {"model": "products", "maxAge": 100000}, 
+          {"model": "players", "maxAge": 100000}, 
+          {"model": "seasons", "maxAge": 100000}, 
+          {"model": "categories", "maxAge": 100000}
+        ]
+      }
+    }
+  }
+  

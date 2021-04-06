@@ -1,0 +1,28 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/shot-tracker",
+      "handler": "shot-tracker.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/shot-tracker",
+      "handler": "shot-tracker.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/shot-tracker",
+      "handler": "shot-tracker.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

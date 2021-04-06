@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "seasons",
+  "info": {
+    "name": "seasons"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "season": {
+      "type": "integer",
+      "required": true
+    },
+    "players": {
+      "via": "seasons",
+      "collection": "players"
+    }
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "kind": "collectionType",
+  "collectionName": "products",
+  "info": {
+    "name": "products",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "edition": {
+      "type": "string",
+      "required": true
+    },
+    "price": {
+      "type": "decimal"
+    },
+    "ar_url": {
+      "type": "string"
+    },
+    "buy_url": {
+      "type": "string"
+    },
+    "images": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "private": true
+    },
+    "category": {
+      "model": "categories"
+    },
+    "players": {
+      "collection": "players",
+      "via": "products",
+      "dominant": true,
+      "private": true
+    },
+    "product_image": {
+      "type": "string",
+      "maxLength": 400
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "InStock",
+        "OutStock",
+        "Limited"
+      ]
+    },
+    "ios_ar_src": {
+      "type": "string"
+    }
+  }
+}
